@@ -1,6 +1,7 @@
 import MCQIllustration from '@/components/MCQIllustration';
+import ProgressIllustration from '@/components/ProgressIllustration';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, BookOpen, Brain, Trophy } from 'lucide-react';
+import { ArrowRight, BookOpen, Brain, Trophy, BarChart3, Target, Zap } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -144,6 +145,72 @@ const Index = () => {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Track Your Progress Section */}
+      <section id="progress" className="py-20 px-6">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Illustration */}
+            <div className="relative order-2 lg:order-1 animate-fade-in">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-success/5 rounded-3xl blur-2xl" />
+              <ProgressIllustration className="w-full h-auto relative z-10" animated />
+            </div>
+
+            {/* Content */}
+            <div className="space-y-8 order-1 lg:order-2 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-success/10 border border-success/20">
+                <BarChart3 className="w-4 h-4 text-success" />
+                <span className="text-sm font-medium text-success">Analytics & Insights</span>
+              </div>
+
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+                Track Your Progress,
+                <span className="text-gradient"> Master Your Weak Spots</span>
+              </h2>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Our intelligent analytics dashboard shows you exactly where you stand. 
+                Identify weak areas, monitor your streaks, and watch your scores improve over time.
+              </p>
+
+              <div className="space-y-4">
+                {[
+                  {
+                    icon: <Target className="w-5 h-5" />,
+                    title: 'Accuracy Tracking',
+                    desc: 'See your real-time accuracy across all topics and question types.'
+                  },
+                  {
+                    icon: <BarChart3 className="w-5 h-5" />,
+                    title: 'Topic Breakdown',
+                    desc: 'Visual breakdown of your performance by medical specialty.'
+                  },
+                  {
+                    icon: <Zap className="w-5 h-5" />,
+                    title: 'Streak Motivation',
+                    desc: 'Build daily habits with streak tracking and milestone rewards.'
+                  }
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border hover:shadow-card transition-shadow">
+                    <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent shrink-0">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                      <p className="text-sm text-muted-foreground">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <Button size="lg" className="gradient-primary text-primary-foreground shadow-card hover:shadow-hover transition-shadow group">
+                View Sample Dashboard
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>
