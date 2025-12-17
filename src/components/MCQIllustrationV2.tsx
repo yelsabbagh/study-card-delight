@@ -209,71 +209,67 @@ const MCQIllustrationV2: React.FC<MCQIllustrationV2Props> = ({ className = '', a
         </g>
 
         {/* Friends Leaderboard - Centered */}
-        <g id="friendsRanking" transform="translate(545, 260)">
-          <text x="95" y="15" fill="#055056" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="middle">Leaderboard</text>
+        <g id="friendsRanking" transform="translate(555, 260)">
+          <text x="85" y="15" fill="#055056" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="middle">Leaderboard</text>
           
           {/* Friend 1 - Ahmed (You) - 1st Place */}
-          <g transform="translate(5, 32)" className="friend-v2-1">
-            <rect width="180" height="30" rx="6" fill="#e8faf5" stroke="#67D1B5" strokeWidth="1.5" />
-            <text x="14" y="20" fill="#67D1B5" fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">1</text>
-            <circle cx="38" cy="15" r="10" fill="#0CA5B7" />
-            <text x="38" y="19" fill="white" fontSize="9" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">A</text>
-            <text x="55" y="19" fill="#055056" fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif">Ahmed (You)</text>
-            <text x="168" y="19" fill="#67D1B5" fontSize="11" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="end">95%</text>
+          <g transform="translate(10, 35)" className="friend-v2-1">
+            <rect width="150" height="34" rx="8" fill="#e8faf5" stroke="#67D1B5" strokeWidth="1.5" />
+            <text x="14" y="22" fill="#67D1B5" fontSize="14" fontWeight="700" fontFamily="Inter, sans-serif">1</text>
+            <circle cx="42" cy="17" r="12" fill="#0CA5B7" />
+            <text x="42" y="21" fill="white" fontSize="10" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">A</text>
+            <text x="62" y="21" fill="#055056" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif">Ahmed (You)</text>
+            <text x="140" y="21" fill="#67D1B5" fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="end">95%</text>
           </g>
           
           {/* Friend 2 - Shahd - 2nd Place */}
-          <g transform="translate(5, 68)" className="friend-v2-2">
-            <rect width="180" height="30" rx="6" fill="#f8f9f9" stroke="#e5eaea" strokeWidth="1" />
-            <text x="14" y="20" fill="#888" fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">2</text>
-            <circle cx="38" cy="15" r="10" fill="#C94678" />
-            <text x="38" y="19" fill="white" fontSize="9" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">S</text>
-            <text x="55" y="19" fill="#555" fontSize="11" fontFamily="Inter, sans-serif">Shahd</text>
-            <text x="168" y="19" fill="#888" fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="end">85%</text>
+          <g transform="translate(10, 78)" className="friend-v2-2">
+            <rect width="150" height="34" rx="8" fill="#f8f9f9" stroke="#e5eaea" strokeWidth="1" />
+            <text x="14" y="22" fill="#888" fontSize="14" fontWeight="700" fontFamily="Inter, sans-serif">2</text>
+            <circle cx="42" cy="17" r="12" fill="#C94678" />
+            <text x="42" y="21" fill="white" fontSize="10" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">S</text>
+            <text x="62" y="21" fill="#555" fontSize="12" fontFamily="Inter, sans-serif">Shahd</text>
+            <text x="140" y="21" fill="#888" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="end">85%</text>
           </g>
           
-          {/* Friend 3 - Ali - 3rd Place - Larger */}
-          <g transform="translate(0, 104)" className="friend-v2-3">
-            <rect width="190" height="30" rx="6" fill="#f8f9f9" stroke="#e5eaea" strokeWidth="1" />
-            <text x="14" y="20" fill="#888" fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">3</text>
-            <circle cx="38" cy="15" r="10" fill="#67D1B5" />
-            <text x="38" y="19" fill="white" fontSize="9" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">A</text>
-            <text x="55" y="19" fill="#555" fontSize="11" fontFamily="Inter, sans-serif">Ali</text>
-            <text x="178" y="19" fill="#888" fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="end">75%</text>
-          </g>
-          
-          {/* Friend 4 - Omar - 4th Place */}
-          <g transform="translate(5, 140)" className="friend-v2-4">
-            <rect width="180" height="30" rx="6" fill="#f8f9f9" stroke="#e5eaea" strokeWidth="1" />
-            <text x="14" y="20" fill="#aaa" fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">4</text>
-            <circle cx="38" cy="15" r="10" fill="#D8D8D8" />
-            <text x="38" y="19" fill="white" fontSize="9" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">O</text>
-            <text x="55" y="19" fill="#777" fontSize="11" fontFamily="Inter, sans-serif">Omar</text>
-            <text x="168" y="19" fill="#aaa" fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="end">70%</text>
-          </g>
-          
-          {/* Friend 5 - Noor - 5th Place */}
-          <g transform="translate(5, 176)" className="friend-v2-5">
-            <rect width="180" height="30" rx="6" fill="#f8f9f9" stroke="#e5eaea" strokeWidth="1" />
-            <text x="14" y="20" fill="#aaa" fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">5</text>
-            <circle cx="38" cy="15" r="10" fill="#0CA5B7" opacity="0.5" />
-            <text x="38" y="19" fill="white" fontSize="9" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">N</text>
-            <text x="55" y="19" fill="#777" fontSize="11" fontFamily="Inter, sans-serif">Noor</text>
-            <text x="168" y="19" fill="#aaa" fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="end">65%</text>
-          </g>
-          
-          {/* Friend 6 - Layla - 6th Place */}
-          <g transform="translate(5, 212)" className="friend-v2-6">
-            <rect width="180" height="30" rx="6" fill="#f8f9f9" stroke="#e5eaea" strokeWidth="1" />
-            <text x="14" y="20" fill="#aaa" fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">6</text>
-            <circle cx="38" cy="15" r="10" fill="#C94678" opacity="0.5" />
-            <text x="38" y="19" fill="white" fontSize="9" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">L</text>
-            <text x="55" y="19" fill="#777" fontSize="11" fontFamily="Inter, sans-serif">Layla</text>
-            <text x="168" y="19" fill="#aaa" fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="end">60%</text>
+          {/* Friend 3 - Ali - 3rd Place */}
+          <g transform="translate(10, 121)" className="friend-v2-3">
+            <rect width="150" height="34" rx="8" fill="#f8f9f9" stroke="#e5eaea" strokeWidth="1" />
+            <text x="14" y="22" fill="#888" fontSize="14" fontWeight="700" fontFamily="Inter, sans-serif">3</text>
+            <circle cx="42" cy="17" r="12" fill="#67D1B5" />
+            <text x="42" y="21" fill="white" fontSize="10" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">A</text>
+            <text x="62" y="21" fill="#555" fontSize="12" fontFamily="Inter, sans-serif">Ali</text>
+            <text x="140" y="21" fill="#888" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="end">75%</text>
           </g>
         </g>
 
-        {/* Topics Section - Removed to fit more users */}
+        {/* Topics Section - At Bottom, Centered */}
+        <g id="topicsSection" transform="translate(555, 440)">
+          <line x1="10" y1="0" x2="160" y2="0" stroke="#e8ecec" strokeWidth="1" />
+          <text x="85" y="25" fill="#055056" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="middle">Topics</text>
+          
+          {/* Topic bars - centered */}
+          <g transform="translate(20, 40)">
+            <circle cx="8" cy="8" r="6" fill="#0CA5B7" />
+            <text x="22" y="12" fill="#555" fontSize="11" fontFamily="Inter, sans-serif">Cardio</text>
+            <rect x="75" y="3" width="55" height="10" rx="5" fill="#e5f0ed" />
+            <rect x="75" y="3" width="42" height="10" rx="5" fill="#0CA5B7" className="topic-bar-1" />
+          </g>
+          
+          <g transform="translate(20, 62)">
+            <circle cx="8" cy="8" r="6" fill="#67D1B5" />
+            <text x="22" y="12" fill="#555" fontSize="11" fontFamily="Inter, sans-serif">Neuro</text>
+            <rect x="75" y="3" width="55" height="10" rx="5" fill="#e5f0ed" />
+            <rect x="75" y="3" width="35" height="10" rx="5" fill="#67D1B5" className="topic-bar-2" />
+          </g>
+          
+          <g transform="translate(20, 84)">
+            <circle cx="8" cy="8" r="6" fill="#C94678" />
+            <text x="22" y="12" fill="#555" fontSize="11" fontFamily="Inter, sans-serif">Pharma</text>
+            <rect x="75" y="3" width="55" height="10" rx="5" fill="#e5f0ed" />
+            <rect x="75" y="3" width="28" height="10" rx="5" fill="#C94678" className="topic-bar-3" />
+          </g>
+        </g>
       </g>
 
       {/* CSS Animations */}
@@ -309,13 +305,10 @@ const MCQIllustrationV2: React.FC<MCQIllustrationV2Props> = ({ className = '', a
             animation: drawRingV2 2.5s ease-out forwards, ringPulseV2 4s ease-in-out infinite 2.5s;
           }
           
-          /* Friend animations */
-          .mcq-v2-animated .friend-v2-1 { animation: friendPopV2 0.5s ease-out forwards, friendGlowV2 3s ease-in-out infinite 0.5s; }
-          .mcq-v2-animated .friend-v2-2 { animation: friendPopV2 0.5s ease-out 0.1s forwards; opacity: 0; }
-          .mcq-v2-animated .friend-v2-3 { animation: friendPopV2 0.5s ease-out 0.2s forwards; opacity: 0; }
-          .mcq-v2-animated .friend-v2-4 { animation: friendPopV2 0.5s ease-out 0.3s forwards; opacity: 0; }
-          .mcq-v2-animated .friend-v2-5 { animation: friendPopV2 0.5s ease-out 0.4s forwards; opacity: 0; }
-          .mcq-v2-animated .friend-v2-6 { animation: friendPopV2 0.5s ease-out 0.5s forwards; opacity: 0; }
+          /* Topic bar animations */
+          .mcq-v2-animated .topic-bar-1 { animation: topicGrowV2 1.5s ease-out forwards, topicPulseV2 3s ease-in-out infinite 1.5s; }
+          .mcq-v2-animated .topic-bar-2 { animation: topicGrowV2 1.5s ease-out 0.2s forwards, topicPulseV2 3.5s ease-in-out infinite 1.7s; }
+          .mcq-v2-animated .topic-bar-3 { animation: topicGrowV2 1.5s ease-out 0.4s forwards, topicPulseV2 4s ease-in-out infinite 1.9s; }
           
           /* Star animations */
           .mcq-v2-animated .star-v2-1 { animation: starFloatV2a 4s ease-in-out infinite; }
@@ -332,6 +325,10 @@ const MCQIllustrationV2: React.FC<MCQIllustrationV2Props> = ({ className = '', a
           .mcq-v2-animated .shape-v2-2 { animation: shapeFloatV2 7s ease-in-out infinite 0.5s; }
           .mcq-v2-animated .shape-v2-3 { animation: shapeFloatV2 5.5s ease-in-out infinite 1s; }
           
+          /* Friend animations */
+          .mcq-v2-animated .friend-v2-1 { animation: friendPopV2 0.5s ease-out forwards, friendGlowV2 3s ease-in-out infinite 0.5s; }
+          .mcq-v2-animated .friend-v2-2 { animation: friendPopV2 0.5s ease-out 0.15s forwards; opacity: 0; }
+          .mcq-v2-animated .friend-v2-3 { animation: friendPopV2 0.5s ease-out 0.3s forwards; opacity: 0; }
           
           @keyframes cardFloatV2 {
             0%, 100% { transform: translateY(0); }
@@ -368,6 +365,16 @@ const MCQIllustrationV2: React.FC<MCQIllustrationV2Props> = ({ className = '', a
           @keyframes ringPulseV2 {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.9; }
+          }
+          
+          @keyframes topicGrowV2 {
+            0% { transform: scaleX(0); transform-origin: left; }
+            100% { transform: scaleX(1); transform-origin: left; }
+          }
+          
+          @keyframes topicPulseV2 {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
           }
           
           @keyframes starFloatV2a {
