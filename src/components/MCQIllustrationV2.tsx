@@ -180,7 +180,7 @@ const MCQIllustrationV2: React.FC<MCQIllustrationV2Props> = ({ className = '', a
         </g>
       </g>
 
-      {/* Stats Panel - Better spacing, with Friends Ranking */}
+      {/* Stats Panel - Centered layout with leaderboard and topics */}
       <g id="statsPanelV2" filter="url(#statsShadowV2)" className="stats-v2-float">
         <rect x="535" y="60" width="210" height="500" rx="16" fill="white" />
         <rect x="535" y="60" width="210" height="500" rx="16" stroke="#e5eaea" strokeWidth="1" fill="none" />
@@ -189,88 +189,85 @@ const MCQIllustrationV2: React.FC<MCQIllustrationV2Props> = ({ className = '', a
         <text x="640" y="100" fill="#055056" fontSize="16" fontWeight="700" fontFamily="Plus Jakarta Sans, sans-serif" textAnchor="middle">Your Stats</text>
         <line x1="560" y1="120" x2="720" y2="120" stroke="#e8ecec" strokeWidth="1" />
 
-        {/* Accuracy Ring */}
-        <g id="progressRingV2" transform="translate(640, 180)" className="ring-v2-draw">
-          <circle r="45" fill="#f5faf8" />
-          <circle r="38" fill="none" stroke="#e5f0ed" strokeWidth="10" />
+        {/* Accuracy Ring - Centered */}
+        <g id="progressRingV2" transform="translate(640, 185)" className="ring-v2-draw">
+          <circle r="50" fill="#f5faf8" />
+          <circle r="42" fill="none" stroke="#e5f0ed" strokeWidth="12" />
           <circle
-            r="38"
+            r="42"
             fill="none"
             stroke="url(#successGradientV2)"
-            strokeWidth="10"
+            strokeWidth="12"
             strokeLinecap="round"
-            strokeDasharray="239"
-            strokeDashoffset="52"
+            strokeDasharray="264"
+            strokeDashoffset="13"
             transform="rotate(-90)"
             className="progress-v2-animate"
           />
-          <text y="5" fill="#055056" fontSize="24" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">78%</text>
-          <text y="22" fill="#888" fontSize="10" fontFamily="Inter, sans-serif" textAnchor="middle">Accuracy</text>
+          <text y="5" fill="#055056" fontSize="26" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">95%</text>
+          <text y="24" fill="#888" fontSize="11" fontFamily="Inter, sans-serif" textAnchor="middle">Accuracy</text>
         </g>
 
-        {/* Streak Indicator */}
-        <g id="streakIconV2" transform="translate(560, 250)" className="streak-v2-glow">
-          <rect width="160" height="48" rx="10" fill="#fff8f0" stroke="#f5a623" strokeWidth="1.2" />
-          {/* Flame icon */}
-          <g transform="translate(22, 24)">
-            <path d="M0 10 C0 5 5 2 5 -3 C7 2 10 5 10 10 C10 15 5 18 5 18 C5 18 0 15 0 10Z" fill="#f5a623" />
-            <path d="M3 11 C3 8 5 6 5 3 C6 6 8 8 8 11 C8 14 5 16 5 16 C5 16 3 14 3 11Z" fill="#ffd93d" />
-          </g>
-          <text x="50" y="28" fill="#b8860b" fontSize="18" fontWeight="700" fontFamily="Inter, sans-serif">7 Days</text>
-          <text x="120" y="28" fill="#d4a54a" fontSize="12" fontFamily="Inter, sans-serif">Streak!</text>
-        </g>
-
-        {/* Donut Chart - Topic Distribution */}
-        <g id="donutChartV2" transform="translate(640, 370)" className="donut-v2-spin">
-          <circle r="36" fill="none" stroke="#0CA5B7" strokeWidth="14" strokeDasharray="56 170" transform="rotate(-90)" />
-          <circle r="36" fill="none" stroke="#67D1B5" strokeWidth="14" strokeDasharray="45 181" transform="rotate(10)" />
-          <circle r="36" fill="none" stroke="#C94678" strokeWidth="14" strokeDasharray="32 194" transform="rotate(80)" />
-          <circle r="36" fill="none" stroke="#D8D8D8" strokeWidth="14" strokeDasharray="22 204" transform="rotate(137)" />
-          <circle r="20" fill="white" />
-        </g>
-
-        {/* Legend */}
-        <g id="chartLegendV2" transform="translate(560, 428)">
-          <circle cx="12" cy="6" r="5" fill="#0CA5B7" />
-          <text x="24" y="10" fill="#555" fontSize="10" fontFamily="Inter, sans-serif">Cardio</text>
+        {/* Friends Leaderboard - Centered */}
+        <g id="friendsRanking" transform="translate(555, 260)">
+          <text x="85" y="15" fill="#055056" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="middle">Leaderboard</text>
           
-          <circle cx="80" cy="6" r="5" fill="#67D1B5" />
-          <text x="92" y="10" fill="#555" fontSize="10" fontFamily="Inter, sans-serif">Neuro</text>
-          
-          <circle cx="145" cy="6" r="5" fill="#C94678" />
-          <text x="157" y="10" fill="#555" fontSize="10" fontFamily="Inter, sans-serif">Pharma</text>
-        </g>
-
-        {/* Friends Ranking Section */}
-        <g id="friendsRanking" transform="translate(555, 455)">
-          <line x1="5" y1="0" x2="165" y2="0" stroke="#e8ecec" strokeWidth="1" />
-          <text x="85" y="22" fill="#055056" fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="middle">Friends Leaderboard</text>
-          
-          {/* Friend 1 - You (highlighted) */}
+          {/* Friend 1 - Ahmed (You) - 1st Place */}
           <g transform="translate(10, 35)" className="friend-v2-1">
-            <rect width="150" height="28" rx="6" fill="#e8faf5" stroke="#67D1B5" strokeWidth="1" />
-            <circle cx="20" cy="14" r="10" fill="#0CA5B7" />
-            <text x="20" y="18" fill="white" fontSize="9" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">Y</text>
-            <text x="40" y="18" fill="#055056" fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif">You</text>
-            <text x="130" y="18" fill="#67D1B5" fontSize="11" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="end">78%</text>
+            <rect width="150" height="34" rx="8" fill="#e8faf5" stroke="#67D1B5" strokeWidth="1.5" />
+            <text x="14" y="22" fill="#67D1B5" fontSize="14" fontWeight="700" fontFamily="Inter, sans-serif">1</text>
+            <circle cx="42" cy="17" r="12" fill="#0CA5B7" />
+            <text x="42" y="21" fill="white" fontSize="10" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">A</text>
+            <text x="62" y="21" fill="#055056" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif">Ahmed (You)</text>
+            <text x="140" y="21" fill="#67D1B5" fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="end">95%</text>
           </g>
           
-          {/* Friend 2 */}
-          <g transform="translate(10, 68)" className="friend-v2-2">
-            <rect width="150" height="28" rx="6" fill="#f8f9f9" stroke="#e5eaea" strokeWidth="1" />
-            <circle cx="20" cy="14" r="10" fill="#C94678" />
-            <text x="20" y="18" fill="white" fontSize="9" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">S</text>
-            <text x="40" y="18" fill="#555" fontSize="11" fontFamily="Inter, sans-serif">Sarah</text>
-            <text x="130" y="18" fill="#888" fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="end">72%</text>
+          {/* Friend 2 - Shahd - 2nd Place */}
+          <g transform="translate(10, 78)" className="friend-v2-2">
+            <rect width="150" height="34" rx="8" fill="#f8f9f9" stroke="#e5eaea" strokeWidth="1" />
+            <text x="14" y="22" fill="#888" fontSize="14" fontWeight="700" fontFamily="Inter, sans-serif">2</text>
+            <circle cx="42" cy="17" r="12" fill="#C94678" />
+            <text x="42" y="21" fill="white" fontSize="10" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">S</text>
+            <text x="62" y="21" fill="#555" fontSize="12" fontFamily="Inter, sans-serif">Shahd</text>
+            <text x="140" y="21" fill="#888" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="end">85%</text>
           </g>
           
-          {/* Friend 3 */}
-          <g transform="translate(10, 101)" className="friend-v2-3">
-            <rect width="150" height="28" rx="6" fill="#f8f9f9" stroke="#e5eaea" strokeWidth="1" />
-            <circle cx="20" cy="14" r="10" fill="#67D1B5" />
-            <text x="20" y="18" fill="white" fontSize="9" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">M</text>
-            <text x="40" y="18" fill="#555" fontSize="11" fontFamily="Inter, sans-serif">Mike</text>
-            <text x="130" y="18" fill="#888" fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="end">68%</text>
+          {/* Friend 3 - Ali - 3rd Place */}
+          <g transform="translate(10, 121)" className="friend-v2-3">
+            <rect width="150" height="34" rx="8" fill="#f8f9f9" stroke="#e5eaea" strokeWidth="1" />
+            <text x="14" y="22" fill="#888" fontSize="14" fontWeight="700" fontFamily="Inter, sans-serif">3</text>
+            <circle cx="42" cy="17" r="12" fill="#67D1B5" />
+            <text x="42" y="21" fill="white" fontSize="10" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">A</text>
+            <text x="62" y="21" fill="#555" fontSize="12" fontFamily="Inter, sans-serif">Ali</text>
+            <text x="140" y="21" fill="#888" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="end">75%</text>
+          </g>
+        </g>
+
+        {/* Topics Section - At Bottom, Centered */}
+        <g id="topicsSection" transform="translate(555, 440)">
+          <line x1="10" y1="0" x2="160" y2="0" stroke="#e8ecec" strokeWidth="1" />
+          <text x="85" y="25" fill="#055056" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="middle">Topics</text>
+          
+          {/* Topic bars - centered */}
+          <g transform="translate(20, 40)">
+            <circle cx="8" cy="8" r="6" fill="#0CA5B7" />
+            <text x="22" y="12" fill="#555" fontSize="11" fontFamily="Inter, sans-serif">Cardio</text>
+            <rect x="75" y="3" width="55" height="10" rx="5" fill="#e5f0ed" />
+            <rect x="75" y="3" width="42" height="10" rx="5" fill="#0CA5B7" className="topic-bar-1" />
+          </g>
+          
+          <g transform="translate(20, 62)">
+            <circle cx="8" cy="8" r="6" fill="#67D1B5" />
+            <text x="22" y="12" fill="#555" fontSize="11" fontFamily="Inter, sans-serif">Neuro</text>
+            <rect x="75" y="3" width="55" height="10" rx="5" fill="#e5f0ed" />
+            <rect x="75" y="3" width="35" height="10" rx="5" fill="#67D1B5" className="topic-bar-2" />
+          </g>
+          
+          <g transform="translate(20, 84)">
+            <circle cx="8" cy="8" r="6" fill="#C94678" />
+            <text x="22" y="12" fill="#555" fontSize="11" fontFamily="Inter, sans-serif">Pharma</text>
+            <rect x="75" y="3" width="55" height="10" rx="5" fill="#e5f0ed" />
+            <rect x="75" y="3" width="28" height="10" rx="5" fill="#C94678" className="topic-bar-3" />
           </g>
         </g>
       </g>
@@ -308,13 +305,10 @@ const MCQIllustrationV2: React.FC<MCQIllustrationV2Props> = ({ className = '', a
             animation: drawRingV2 2.5s ease-out forwards, ringPulseV2 4s ease-in-out infinite 2.5s;
           }
           
-          .mcq-v2-animated .streak-v2-glow {
-            animation: streakGlowV2 2.5s ease-in-out infinite;
-          }
-          
-          .mcq-v2-animated .donut-v2-spin {
-            animation: donutSpinV2 25s linear infinite;
-          }
+          /* Topic bar animations */
+          .mcq-v2-animated .topic-bar-1 { animation: topicGrowV2 1.5s ease-out forwards, topicPulseV2 3s ease-in-out infinite 1.5s; }
+          .mcq-v2-animated .topic-bar-2 { animation: topicGrowV2 1.5s ease-out 0.2s forwards, topicPulseV2 3.5s ease-in-out infinite 1.7s; }
+          .mcq-v2-animated .topic-bar-3 { animation: topicGrowV2 1.5s ease-out 0.4s forwards, topicPulseV2 4s ease-in-out infinite 1.9s; }
           
           /* Star animations */
           .mcq-v2-animated .star-v2-1 { animation: starFloatV2a 4s ease-in-out infinite; }
@@ -373,14 +367,14 @@ const MCQIllustrationV2: React.FC<MCQIllustrationV2Props> = ({ className = '', a
             50% { opacity: 0.9; }
           }
           
-          @keyframes streakGlowV2 {
-            0%, 100% { opacity: 1; filter: brightness(1); }
-            50% { opacity: 0.95; filter: brightness(1.05); }
+          @keyframes topicGrowV2 {
+            0% { transform: scaleX(0); transform-origin: left; }
+            100% { transform: scaleX(1); transform-origin: left; }
           }
           
-          @keyframes donutSpinV2 {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+          @keyframes topicPulseV2 {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
           }
           
           @keyframes starFloatV2a {
