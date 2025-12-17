@@ -209,65 +209,99 @@ const MCQIllustrationV2: React.FC<MCQIllustrationV2Props> = ({ className = '', a
         </g>
 
         {/* Friends Leaderboard - Centered */}
-        <g id="friendsRanking" transform="translate(555, 260)">
+        <g id="friendsRanking" transform="translate(555, 250)">
           <text x="85" y="15" fill="#055056" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="middle">Leaderboard</text>
           
-          {/* Friend 1 - Ahmed (You) - 1st Place */}
-          <g transform="translate(10, 35)" className="friend-v2-1">
-            <rect width="150" height="34" rx="8" fill="#e8faf5" stroke="#67D1B5" strokeWidth="1.5" />
-            <text x="14" y="22" fill="#67D1B5" fontSize="14" fontWeight="700" fontFamily="Inter, sans-serif">1</text>
-            <circle cx="42" cy="17" r="12" fill="#0CA5B7" />
-            <text x="42" y="21" fill="white" fontSize="10" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">A</text>
-            <text x="62" y="21" fill="#055056" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif">Ahmed (You)</text>
-            <text x="140" y="21" fill="#67D1B5" fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="end">95%</text>
+          {/* 1st Place - Ahmed (You) - Gold with Crown */}
+          <g transform="translate(10, 30)" className="friend-v2-1">
+            <rect width="150" height="30" rx="6" fill="#fef9e6" stroke="#f0c840" strokeWidth="1.5" />
+            {/* Crown Badge */}
+            <g transform="translate(8, 8)">
+              <path d="M2 10L5 4L8 7L11 4L14 10H2Z" fill="#f0c840" />
+              <rect x="2" y="10" width="12" height="3" rx="1" fill="#d4a828" />
+            </g>
+            <circle cx="38" cy="15" r="10" fill="#f0c840" />
+            <text x="38" y="19" fill="white" fontSize="9" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">A</text>
+            <text x="54" y="18" fill="#055056" fontSize="10" fontWeight="600" fontFamily="Inter, sans-serif">Ahmed (You)</text>
+            <text x="142" y="18" fill="#d4a828" fontSize="10" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="end">95%</text>
           </g>
           
-          {/* Friend 2 - Shahd - 2nd Place */}
-          <g transform="translate(10, 78)" className="friend-v2-2">
-            <rect width="150" height="34" rx="8" fill="#f8f9f9" stroke="#e5eaea" strokeWidth="1" />
-            <text x="14" y="22" fill="#888" fontSize="14" fontWeight="700" fontFamily="Inter, sans-serif">2</text>
-            <circle cx="42" cy="17" r="12" fill="#C94678" />
-            <text x="42" y="21" fill="white" fontSize="10" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">S</text>
-            <text x="62" y="21" fill="#555" fontSize="12" fontFamily="Inter, sans-serif">Shahd</text>
-            <text x="140" y="21" fill="#888" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="end">85%</text>
+          {/* 2nd Place - Sara - Silver with Medal */}
+          <g transform="translate(10, 66)" className="friend-v2-2">
+            <rect width="150" height="30" rx="6" fill="#f5f7f9" stroke="#a8b5c4" strokeWidth="1.2" />
+            {/* Medal Badge */}
+            <g transform="translate(10, 6)">
+              <circle cx="6" cy="10" r="6" fill="#a8b5c4" />
+              <rect x="4" y="0" width="4" height="5" fill="#C94678" />
+              <text x="6" y="13" fill="white" fontSize="7" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">2</text>
+            </g>
+            <circle cx="38" cy="15" r="10" fill="#a8b5c4" />
+            <text x="38" y="19" fill="white" fontSize="9" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">S</text>
+            <text x="54" y="18" fill="#555" fontSize="10" fontWeight="500" fontFamily="Inter, sans-serif">Sara</text>
+            <text x="142" y="18" fill="#7a8a9a" fontSize="10" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="end">88%</text>
           </g>
           
-          {/* Friend 3 - Ali - 3rd Place */}
-          <g transform="translate(10, 121)" className="friend-v2-3">
-            <rect width="150" height="34" rx="8" fill="#f8f9f9" stroke="#e5eaea" strokeWidth="1" />
-            <text x="14" y="22" fill="#888" fontSize="14" fontWeight="700" fontFamily="Inter, sans-serif">3</text>
-            <circle cx="42" cy="17" r="12" fill="#67D1B5" />
-            <text x="42" y="21" fill="white" fontSize="10" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">A</text>
-            <text x="62" y="21" fill="#555" fontSize="12" fontFamily="Inter, sans-serif">Ali</text>
-            <text x="140" y="21" fill="#888" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="end">75%</text>
+          {/* 3rd Place - Ali - Bronze with Medal */}
+          <g transform="translate(10, 102)" className="friend-v2-3">
+            <rect width="150" height="30" rx="6" fill="#fdf8f3" stroke="#cd8c52" strokeWidth="1.2" />
+            {/* Medal Badge */}
+            <g transform="translate(10, 6)">
+              <circle cx="6" cy="10" r="6" fill="#cd8c52" />
+              <rect x="4" y="0" width="4" height="5" fill="#0CA5B7" />
+              <text x="6" y="13" fill="white" fontSize="7" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">3</text>
+            </g>
+            <circle cx="38" cy="15" r="10" fill="#cd8c52" />
+            <text x="38" y="19" fill="white" fontSize="9" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">A</text>
+            <text x="54" y="18" fill="#555" fontSize="10" fontWeight="500" fontFamily="Inter, sans-serif">Ali</text>
+            <text x="142" y="18" fill="#b07840" fontSize="10" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="end">82%</text>
+          </g>
+          
+          {/* 4th Place - Shahd - Normal */}
+          <g transform="translate(10, 138)" className="friend-v2-4">
+            <rect width="150" height="30" rx="6" fill="#f8f9f9" stroke="#e5eaea" strokeWidth="1" />
+            <text x="14" y="19" fill="#888" fontSize="10" fontWeight="600" fontFamily="Inter, sans-serif">4</text>
+            <circle cx="38" cy="15" r="10" fill="#C94678" />
+            <text x="38" y="19" fill="white" fontSize="9" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">S</text>
+            <text x="54" y="18" fill="#666" fontSize="10" fontFamily="Inter, sans-serif">Shahd</text>
+            <text x="142" y="18" fill="#888" fontSize="10" fontWeight="500" fontFamily="Inter, sans-serif" textAnchor="end">76%</text>
+          </g>
+          
+          {/* 5th Place - Omar - Normal */}
+          <g transform="translate(10, 174)" className="friend-v2-5">
+            <rect width="150" height="30" rx="6" fill="#f8f9f9" stroke="#e5eaea" strokeWidth="1" />
+            <text x="14" y="19" fill="#888" fontSize="10" fontWeight="600" fontFamily="Inter, sans-serif">5</text>
+            <circle cx="38" cy="15" r="10" fill="#67D1B5" />
+            <text x="38" y="19" fill="white" fontSize="9" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle">O</text>
+            <text x="54" y="18" fill="#666" fontSize="10" fontFamily="Inter, sans-serif">Omar</text>
+            <text x="142" y="18" fill="#888" fontSize="10" fontWeight="500" fontFamily="Inter, sans-serif" textAnchor="end">70%</text>
           </g>
         </g>
 
         {/* Topics Section - At Bottom, Centered */}
-        <g id="topicsSection" transform="translate(555, 440)">
+        <g id="topicsSection" transform="translate(555, 470)">
           <line x1="10" y1="0" x2="160" y2="0" stroke="#e8ecec" strokeWidth="1" />
-          <text x="85" y="25" fill="#055056" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="middle">Topics</text>
+          <text x="85" y="20" fill="#055056" fontSize="11" fontWeight="600" fontFamily="Inter, sans-serif" textAnchor="middle">Topics</text>
           
-          {/* Topic bars - centered */}
-          <g transform="translate(20, 40)">
-            <circle cx="8" cy="8" r="6" fill="#0CA5B7" />
-            <text x="22" y="12" fill="#555" fontSize="11" fontFamily="Inter, sans-serif">Cardio</text>
-            <rect x="75" y="3" width="55" height="10" rx="5" fill="#e5f0ed" />
-            <rect x="75" y="3" width="42" height="10" rx="5" fill="#0CA5B7" className="topic-bar-1" />
+          {/* Topic bars - centered, compact */}
+          <g transform="translate(20, 32)">
+            <circle cx="6" cy="6" r="5" fill="#0CA5B7" />
+            <text x="18" y="10" fill="#555" fontSize="10" fontFamily="Inter, sans-serif">Cardio</text>
+            <rect x="65" y="1" width="60" height="8" rx="4" fill="#e5f0ed" />
+            <rect x="65" y="1" width="45" height="8" rx="4" fill="#0CA5B7" className="topic-bar-1" />
           </g>
           
-          <g transform="translate(20, 62)">
-            <circle cx="8" cy="8" r="6" fill="#67D1B5" />
-            <text x="22" y="12" fill="#555" fontSize="11" fontFamily="Inter, sans-serif">Neuro</text>
-            <rect x="75" y="3" width="55" height="10" rx="5" fill="#e5f0ed" />
-            <rect x="75" y="3" width="35" height="10" rx="5" fill="#67D1B5" className="topic-bar-2" />
+          <g transform="translate(20, 50)">
+            <circle cx="6" cy="6" r="5" fill="#67D1B5" />
+            <text x="18" y="10" fill="#555" fontSize="10" fontFamily="Inter, sans-serif">Neuro</text>
+            <rect x="65" y="1" width="60" height="8" rx="4" fill="#e5f0ed" />
+            <rect x="65" y="1" width="38" height="8" rx="4" fill="#67D1B5" className="topic-bar-2" />
           </g>
           
-          <g transform="translate(20, 84)">
-            <circle cx="8" cy="8" r="6" fill="#C94678" />
-            <text x="22" y="12" fill="#555" fontSize="11" fontFamily="Inter, sans-serif">Pharma</text>
-            <rect x="75" y="3" width="55" height="10" rx="5" fill="#e5f0ed" />
-            <rect x="75" y="3" width="28" height="10" rx="5" fill="#C94678" className="topic-bar-3" />
+          <g transform="translate(20, 68)">
+            <circle cx="6" cy="6" r="5" fill="#C94678" />
+            <text x="18" y="10" fill="#555" fontSize="10" fontFamily="Inter, sans-serif">Pharma</text>
+            <rect x="65" y="1" width="60" height="8" rx="4" fill="#e5f0ed" />
+            <rect x="65" y="1" width="30" height="8" rx="4" fill="#C94678" className="topic-bar-3" />
           </g>
         </g>
       </g>
@@ -327,8 +361,10 @@ const MCQIllustrationV2: React.FC<MCQIllustrationV2Props> = ({ className = '', a
           
           /* Friend animations */
           .mcq-v2-animated .friend-v2-1 { animation: friendPopV2 0.5s ease-out forwards, friendGlowV2 3s ease-in-out infinite 0.5s; }
-          .mcq-v2-animated .friend-v2-2 { animation: friendPopV2 0.5s ease-out 0.15s forwards; opacity: 0; }
-          .mcq-v2-animated .friend-v2-3 { animation: friendPopV2 0.5s ease-out 0.3s forwards; opacity: 0; }
+          .mcq-v2-animated .friend-v2-2 { animation: friendPopV2 0.5s ease-out 0.15s forwards, friendShimmerV2 4s ease-in-out infinite 0.65s; opacity: 0; }
+          .mcq-v2-animated .friend-v2-3 { animation: friendPopV2 0.5s ease-out 0.3s forwards, friendShimmerV2 4.5s ease-in-out infinite 0.8s; opacity: 0; }
+          .mcq-v2-animated .friend-v2-4 { animation: friendPopV2 0.5s ease-out 0.45s forwards; opacity: 0; }
+          .mcq-v2-animated .friend-v2-5 { animation: friendPopV2 0.5s ease-out 0.6s forwards; opacity: 0; }
           
           @keyframes cardFloatV2 {
             0%, 100% { transform: translateY(0); }
@@ -404,7 +440,12 @@ const MCQIllustrationV2: React.FC<MCQIllustrationV2Props> = ({ className = '', a
           
           @keyframes friendGlowV2 {
             0%, 100% { filter: brightness(1); }
-            50% { filter: brightness(1.02); }
+            50% { filter: brightness(1.05); }
+          }
+          
+          @keyframes friendShimmerV2 {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.92; }
           }
           
           .mcq-v2-animated .option-v2-hover:hover {
