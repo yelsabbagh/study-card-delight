@@ -1,4 +1,5 @@
 import MCQIllustration from '@/components/MCQIllustration';
+import MCQIllustrationV2 from '@/components/MCQIllustrationV2';
 import ProgressIllustration from '@/components/ProgressIllustration';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, BookOpen, Brain, Trophy, BarChart3, Target, Zap } from 'lucide-react';
@@ -145,6 +146,26 @@ const Index = () => {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* MCQ Demo Section */}
+      <section id="mcq-demo" className="py-20 px-6">
+        <div className="container mx-auto">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Learn From Every Question
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Detailed explanations for both correct and incorrect answers help you 
+              understand the reasoning behind each choice.
+            </p>
+          </div>
+          
+          <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-success/5 rounded-3xl blur-2xl" />
+            <MCQIllustrationV2 className="w-full max-w-4xl mx-auto h-auto relative z-10" animated />
           </div>
         </div>
       </section>
