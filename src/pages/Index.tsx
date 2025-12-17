@@ -1,6 +1,7 @@
 import MCQIllustration from '@/components/MCQIllustration';
 import MCQIllustrationV2 from '@/components/MCQIllustrationV2';
 import ProgressIllustration from '@/components/ProgressIllustration';
+import StatsPanel from '@/components/StatsPanel';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, BookOpen, Brain, Trophy, BarChart3, Target, Zap } from 'lucide-react';
 
@@ -239,19 +240,28 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="container mx-auto">
-          <div className="relative overflow-hidden rounded-3xl gradient-primary p-12 md:p-16 text-center">
+          <div className="relative overflow-hidden rounded-3xl gradient-primary p-12 md:p-16">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
-            <div className="relative z-10">
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-                Ready to Ace Your Exams?
-              </h2>
-              <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
-                Join thousands of medical students who've improved their scores with MedQuiz Pro.
-              </p>
-              <Button size="lg" variant="secondary" className="shadow-lg hover:shadow-xl transition-shadow">
-                Start Your Free Trial
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+            
+            <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+              {/* Left Content */}
+              <div className="text-center md:text-left">
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+                  Ready to Ace Your Exams?
+                </h2>
+                <p className="text-primary-foreground/80 max-w-xl mb-8">
+                  Join thousands of medical students who've improved their scores with MedQuiz Pro.
+                </p>
+                <Button size="lg" variant="secondary" className="shadow-lg hover:shadow-xl transition-shadow">
+                  Start Your Free Trial
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
+              
+              {/* Right - Stats Panel */}
+              <div className="flex justify-center md:justify-end">
+                <StatsPanel className="w-full max-w-[280px] h-auto drop-shadow-2xl" animated />
+              </div>
             </div>
           </div>
         </div>
